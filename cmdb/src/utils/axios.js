@@ -11,7 +11,8 @@ var instance = axios.create({
   },
   timeout: 30000,
   withCredentials: true,
-  baseURL: 'http://47.89.181.139:9988'
+  baseURL: 'http://47.89.181.139'
+  // baseURL: 'http://192.168.37.157:8080'
 })
 
 // 请求拦截器

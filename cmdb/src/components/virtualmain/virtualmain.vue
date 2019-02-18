@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="tableData3" class="virtual" :row-class-name="tableRowClassName">
+  <el-table :data="tableData3" class="virtual">
     <el-table-column label="虚拟设备信息概览" style="text-align: center">
       <el-table-column prop="status" label="序号" width="300px">
       </el-table-column>
