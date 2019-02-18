@@ -1,0 +1,58 @@
+{
+  "maininfo": {
+    "physical_machine": {
+      "physical_machine_count": 14,
+      "KVM_count": 1,
+      "Docker": 3,
+      "Others": 3
+    },
+    "virtual_machine": {
+      "virtual_machine_count": 240,
+      "Vmware": 83,
+      "Docker": 155,
+      "KVM": 2
+    }
+  },
+  "physical_machine_info": [
+    {
+      "id": 2202,
+      "ip_address": "10.16.8.224",
+      "server_brand": "Dell Inc PowerEdge R510",
+      "system_version": "Ubuntu 12.04",
+      "status": "线上运行",
+      "Host_machine": "docker",
+      "user": "用户ID=3"
+    },
+    {
+      "id": 2203,
+      "ip_address": "10.19.8.224",
+      "server_brand": "Dell Inc PowerEdge R512",
+      "system_version": "CentOS7",
+      "status": "下线",
+      "Host_machine": "docker",
+      "user": "用户ID=5"
+    }
+  ],
+  "virtual_machine_info": [
+    {
+      "id": 3399,
+      "ip_address": "10.16.8.204",
+      "server_kind": "VMX: app4",
+      "system_hostname": "app4",
+      "system_version": "Ubuntu 12.04",
+      "status": "线上运行",
+      "Host_machine": "docker",
+      "user": "用户ID=3"
+    },
+    {
+      "id": 3397,
+      "ip_address": "10.16.8.16",
+      "server_kind": "VMX: redis",
+      "system_hostname": "redis",
+      "system_version": "CentOS7",
+      "status": "下线",
+      "Host_machine": "docker",
+      "user": "用户ID=5"
+    }
+  ]
+}

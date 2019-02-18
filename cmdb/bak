@@ -1,0 +1,49 @@
+const appData = require('./data.json')
+const maininfo = appData.maininfo
+const physical = appData.physical_machine_info
+const virtual = appData.virtual_machine_info
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
+module.exports = {
+  css: {
+    loaderOptions: {
+      stylus: {
+        'resolve url': true,
+        'import': [
+          './src/theme'
+        ]
+      }
+    }
+  },
+
+  devServer: {
+    before(app) {
+      app.get('/api/maininfo', function (req, res) {
+        res.json({
+          errno: 0,
+          data: maininfo
+        })
+      })
+      app.get('/api/physical', function (req, res) {
+        res.json({
+          errno: 0,
+          data: physical_machine_info
+        })
+      })
+      app.get('/api/virtual', function (req, res) {
+        res.json({
+          errno: 0,
+          data: virtual_machine_info
+        })
+      })
+    }
+  },
+  chainWebpack(config) {
+    config.resolve.alias
+      .set('components', resolve('src/components'))
+      .set('common', resolve('src/common'))
+  }
+}
